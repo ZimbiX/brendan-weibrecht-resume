@@ -5,6 +5,7 @@ require 'bundler/setup'
 
 require 'sinatra/base'
 require 'sass'
+require 'redcarpet'
 
 class MyApp < Sinatra::Base
 
