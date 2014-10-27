@@ -8,7 +8,6 @@ body, table
   /* An A4 page is approximately equivalent to the html element being 684px wide in Chrome */
 
 h1
-  font-variant: small-caps
   font-size: 28pt
 
 h1, h2, h3, h4, h5
@@ -25,12 +24,13 @@ table
   border-spacing: 0
   border-collapse: collapse
 
-table th, table td
-  text-align: left
-  padding: 0
+  th, td
+    text-align: left
+    padding: 0
 
-table.with-padding th, table.with-padding td
-  padding: 2px 0
+  & .with-padding
+    th, td
+      padding: 2px 0
 
 table.horizontal-headers tr > th
   padding-right: 30px
@@ -42,8 +42,8 @@ ul#uni-achievements li div
   display: inline-block
   width: 16em
 
-ul#uni-achievements li div + div
-  width: 200px
+  & + div
+    width: 200px
 
 li
   margin: 2px 0
