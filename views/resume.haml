@@ -1,11 +1,14 @@
-= haml :_header
-= haml :_intro
-= haml :_education
-= haml :_experience
-= haml :_other_employment
-= haml :_volunteering
-= haml :_achievements
-= haml :_skills_abilities
-= haml :_extra_curricular
-= haml :_interests
-= haml :_referees
+- [ 'header',
+    'intro',
+    'education',
+    'experience',
+    'other_employment',
+    'volunteering',
+    'achievements',
+    'skills_abilities',
+    'extra_curricular',
+    'interests',
+    'referees',
+  ].each do |partial|
+  .nobreak
+    = haml ('_' + partial).to_sym
