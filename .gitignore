@@ -1,1 +1,4 @@
 .sass-cache
+build/*.doc
+build/*.docx
+build/*.pdf
