@@ -2,6 +2,8 @@
 
 Having previously created my résumé in HTML and CSS so as to have maximum control over its layout and formatting, I decided to over-engineer it in order to distinguish myself when applying for IBL placement positions (through Swinburne's Industry-Based Learning program).
 
+The [current version is available][html build] under `build`.
+
 ## Setup
 
 With Ruby 1.9.3 installed, just run Bundler to install all the required gems:
@@ -47,3 +49,5 @@ To best preserve formatting, use Microsoft Word. Open the HTML in Word, and save
 ## Committing changes
 
 Build before committing to keep the published build up to date.
+
+[html build]: http://htmlpreview.github.com/?https://github.com/ZimbiX/brendan-weibrecht-resume/blob/master/build/brendan-weibrecht-resume.html
