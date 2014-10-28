@@ -61,6 +61,8 @@ GEM
       rake
     haml (4.1.0.beta.1)
       tilt
+    haml-contrib (1.0.0.1)
+      haml (>= 3.2.0.alpha.13)
     hirb (0.7.2)
     hitimes (1.2.2)
     hpricot (0.8.6)
@@ -89,6 +91,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     lumberjack (1.0.9)
+    maruku (0.7.2)
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (5.4.2)
@@ -160,8 +163,10 @@ DEPENDENCIES
   guard-livereload
   guard-rake
   haml
+  haml-contrib
   html2haml
   jazz_hands
+  maruku
   rake
   redcarpet
   sass

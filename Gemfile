@@ -14,4 +14,6 @@ group :development do
   gem 'jazz_hands' # Better Pry
   gem 'guard-livereload', require: false
   gem 'redcarpet' # Markdown
+  gem 'haml-contrib' # For Maruku
+  gem 'maruku' # Maruku markdown
 end
