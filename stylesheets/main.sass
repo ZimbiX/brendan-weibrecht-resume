@@ -73,13 +73,22 @@ p
 .todo
   color: #AAA
 
+$text-colour: black
+$bg-colour: #FFF
+$link-colour: rgb(0, 0, 238)
+
 a
-  color: rgb(0, 0, 238)
+  color: $link-colour
 
 #footer
+  $opacity: 50%
   margin-top: 10px
   text-align: center
-  opacity: 0.5
+  // opacity: 0.5
+  color: mix($text-colour, $bg-colour, $opacity)
 
   p
     margin-bottom: 0
+
+  a
+    color: mix($link-colour, $bg-colour, $opacity)
