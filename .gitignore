@@ -2,5 +2,5 @@
 build/*.doc
 build/*.docx
 build/*.pdf
-cover-letters
+cover-letters/*cover letter.md
 applications
