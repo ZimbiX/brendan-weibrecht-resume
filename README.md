@@ -1,6 +1,6 @@
 # Brendan Weibrecht's résumé
 
-Having previously created my résumé in HTML and CSS so as to have maximum control over its layout and formatting, I decided to over-engineer it in order to distinguish myself when applying for IBL placement positions (through Swinburne's Industry-Based Learning program).
+Having previously created my résumé in HTML and CSS so as to have maximum control over its layout and formatting, I decided to over-engineer it in order to distinguish myself when applying for positions.
 
 The [current version is available][html build] under `build`.
 
