@@ -2,5 +2,6 @@
 build/*.doc
 build/*.docx
 build/*.pdf
-cover-letters/*cover letter.md
+cover-letters/*
+!cover-letters/README.md
 applications
