@@ -11,7 +11,8 @@ group :development do
   gem 'sinatra'
   gem 'tilt', '~> 1.3'
   gem 'shotgun'
-  gem 'jazz_hands' # Better Pry
+  gem 'jazz_fingers' # Better Pry
+  gem 'pry-rescue'
   gem 'guard-livereload', require: false
   gem 'redcarpet' # Markdown
   gem 'haml-contrib' # For Maruku
