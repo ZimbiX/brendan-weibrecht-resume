@@ -35,6 +35,7 @@ table
 
   th, td
     text-align: left
+    vertical-align: top
     padding: 0
 
   & .with-padding
@@ -42,7 +43,7 @@ table
       padding: 2px 0
 
 table.horizontal-headers tr > th
-  padding-right: 30px
+  padding-right: 20px
 
 div.section
   margin-left: 20px
@@ -63,12 +64,18 @@ li
 p
   margin: 0.4em 0
 
-.two-column ul
-  display: inline-block
-  margin: 0
-  margin-right: 40px
-  min-width: 120px
-  vertical-align: top
+.two-column
+  text-align: justify
+  & ul, table
+    display: inline-block
+    margin: 0
+    min-width: 120px
+    vertical-align: top
+  & ul
+    margin-right: 40px
+  & table
+    &:nth-child(odd)
+      width: 45%
 
 .break
   page-break-before: always
