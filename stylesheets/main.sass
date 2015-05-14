@@ -65,7 +65,6 @@ p
   margin: 0.4em 0
 
 .two-column
-  text-align: justify
   & ul, table
     display: inline-block
     margin: 0
@@ -76,6 +75,11 @@ p
   & table
     &:nth-child(odd)
       width: 45%
+  &.professional-development ul
+    margin-right: 3px
+    &:nth-child(odd)
+      min-width: 286px
+      max-width: 46%
 
 .break
   page-break-before: always
