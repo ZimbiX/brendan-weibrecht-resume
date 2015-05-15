@@ -1,8 +1,8 @@
 # Brendan Weibrecht's résumé
 
-Having previously created my résumé in HTML and CSS so as to have maximum control over its layout and formatting, I decided to over-engineer it in order to distinguish myself when applying for positions.
+**[View the current version of my résumé online][html build]** (available under `build`).
 
-The [current version is available][html build] under `build`.
+Having previously created my résumé in HTML and CSS so as to have maximum control over its layout and formatting, I decided to over-engineer it in order to distinguish myself when applying for positions.
 
 ## Setup
 
