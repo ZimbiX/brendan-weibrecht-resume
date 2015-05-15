@@ -2,7 +2,7 @@
 
 **[View the current version of my résumé online][html build]** (available under `build`).
 
-Having previously created my résumé in HTML and CSS so as to have maximum control over its layout and formatting, I decided to over-engineer it in order to distinguish myself when applying for positions.
+Having previously created my résumé in HTML and CSS so as to have maximum control over its layout and formatting, I decided to over-engineer it in order to distinguish myself when applying for positions. Content is now written in Markdown, layouts use HAML, style is in Sass, and previews and builds happen automatically thanks to some handy Ruby gems.
 
 ## Setup
 
