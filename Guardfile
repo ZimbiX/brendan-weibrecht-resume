@@ -4,7 +4,6 @@ guarding = Proc.new do
     .sass-cache
     applications
     build
-    cover-letters
   ].join '|'
   ignore(/^(#{ignore_dirs})\//)
 end
