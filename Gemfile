@@ -17,4 +17,5 @@ group :development do
   gem 'redcarpet' # Markdown
   gem 'haml-contrib' # For Maruku
   gem 'maruku' # Maruku markdown
+  gem 'pdfkit'
 end

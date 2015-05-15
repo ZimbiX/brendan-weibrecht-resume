@@ -3,7 +3,7 @@ require 'sinatra/base'
 require './app'
 
 build_dir = Pathname.new 'build'
-build_file = Pathname.new 'brendan-weibrecht-resume.html'
+build_name = Pathname.new 'brendan-weibrecht-resume'
 
 task :build do
   begin
@@ -11,9 +11,13 @@ task :build do
     request = Rack::MockRequest.new MyApp
     puts 'Getting request...'
     body = request.get('/').body
-    puts 'Saving to file...'
+    puts 'Saving HTML to file...'
     FileUtils.mkdir_p build_dir
-    IO.write build_dir + build_file, body
+    IO.write build_dir + build_name + '.html', body
+    puts 'Generating PDF from HTML...'
+    pdfkit = PDFKit.new html, :page_size => 'A4'
+    puts 'Saving PDF to file...'
+    pdfkit.to_file build_dir + build_name + '.pdf'
     puts 'Build finished'
   rescue
     puts 'Build failed'
