@@ -13,11 +13,7 @@ task :build do
     body = request.get('/').body
     puts 'Saving HTML to file...'
     FileUtils.mkdir_p build_dir
-    IO.write build_dir + build_name + '.html', body
-    puts 'Generating PDF from HTML...'
-    pdfkit = PDFKit.new html, :page_size => 'A4'
-    puts 'Saving PDF to file...'
-    pdfkit.to_file build_dir + build_name + '.pdf'
+    IO.write build_dir + "#{build_name}.html", body
     puts 'Build finished'
   rescue
     puts 'Build failed'
