@@ -65,27 +65,37 @@
           width: 200px; }
       
       li {
-        margin: 2px 0; }
+        margin: 2px 0 0 0; }
         li p {
           margin: 0; }
       
       p {
         margin: 0.4em 0; }
       
-      .two-column ul, .two-column table {
-        display: inline-block;
-        margin: 0;
-        min-width: 120px;
-        vertical-align: top; }
-      .two-column ul {
-        margin-right: 40px; }
-      .two-column table:nth-child(odd) {
-        width: 45%; }
-      .two-column.professional-development ul {
-        margin-right: 3px; }
-        .two-column.professional-development ul:nth-child(odd) {
-          min-width: 286px;
-          max-width: 46%; }
+      .two-column {
+        display: flex;
+        margin-right: 3%; }
+        .two-column .column {
+          display: inline-block;
+          margin: 0;
+          margin-right: 3%;
+          vertical-align: top; }
+          .two-column .column:last-child {
+            margin-right: 0; }
+      
+      @media (max-width: 500px) {
+        .two-column {
+          flex-wrap: wrap;
+          margin-right: auto; } }
+      .two-column.header {
+        flex-wrap: wrap;
+        margin-right: 0; }
+        .two-column.header table.column {
+          margin-right: auto; }
+          .two-column.header table.column:first-child {
+            width: 240px; }
+          .two-column.header table.column th {
+            width: 58px; }
       
       .break {
         page-break-before: always; }
@@ -109,8 +119,8 @@
   <body>
     <div class='nobreak'>
       <h1>Brendan Weibrecht</h1>
-      <div class='section two-column'>
-        <table class='with-padding horizontal-headers'>
+      <div class='section two-column header'>
+        <table class='column with-padding horizontal-headers'>
           <tbody>
             <tr>
               <th>Email:</th>
@@ -136,7 +146,7 @@
             </tr>
           </tbody>
         </table>
-        <table class='with-padding horizontal-headers'>
+        <table class='column with-padding horizontal-headers'>
           <tbody>
             <tr>
               <th>Twitter:</th>
@@ -233,7 +243,7 @@
       <div class='section'>
         <h3>Professional development</h3>
         <div class='section two-column professional-development'>
-          <ul>
+          <ul class='column'>
             <li>
               
               <p><strong>Melbourne Ruby meetup</strong></p>
@@ -242,14 +252,20 @@
               
               <p>Regular monthly attendee</p>
             </li>
-          </ul>
-          <ul>
             <li>
               
               <p><strong>RubyConf</strong></p>
               
               <p>5–6 February 2015</p>
             </li>
+            <li>
+              
+              <p><strong>Functional programming meetups</strong></p>
+              
+              <p>2x Haskell; 2x Melbourne Functional User Group; 1x Scala</p>
+            </li>
+          </ul>
+          <ul class='column'>
             <li>
               
               <p><strong>Ruxcon Security Conference</strong></p>
@@ -260,21 +276,23 @@
             </li>
             <li>
               
-              <p><strong>OWASP meetup: Exploitation Training</strong></p>
+              <p><strong>OWASP meetup</strong></p>
               
-              <p>2014: December; 2015: February, August</p>
+              <p>3x Exploitation Training</p>
             </li>
             <li>
               
-              <p><strong>Functional programming meetups</strong></p>
+              <p><strong>Secure Development Melbourne</strong></p>
+            </li>
+            <li>
               
-              <p>2x Haskell; 2x Melbourne Functional User Group; 1x Scala</p>
+              <p><strong>Rust meetup</strong></p>
             </li>
           </ul>
         </div>
         <h3>Institutional education</h3>
         <div class='section'>
-          <p><strong>Bachelor of Science (Professional Software Development)</strong>, Swinburne University of Technology, Hawthorn (2012 &ndash; Present)
+          <p><strong>Bachelor of Science (Professional Software Development)</strong>, Swinburne University of Technology, Hawthorn (2012 &ndash; 2014, suspended indefinitely)
           </p>
           <ul id='uni-achievements'>
             <li>
@@ -343,7 +361,10 @@
             
             <p><strong>1<sup>st</sup></strong> prize in the Monash University IT Challenge 2011, Database category, with my Ace Video Rentals Database program – <a href="http://infotech.monash.edu.au/about/competitions/it-challenge/results-2011.html">infotech.monash.edu.au/about/competitions/it-challenge/results-2011.html</a></p>
           </li>
-          <li>Multiple presentions to the Swinburne Cyber Security Club, imparting hacking knowledge of [SQL Injection](https://docs.google.com/presentation/d/18IJfC_JXm5SDBlKClTRSyM_eBUIk-IQJYrYsXsjrDHw/edit?usp=sharing) and some interesting [OverTheWire challenges](https://www.youtube.com/watch?v=f8Ct_rm2cg4)</li>
+          <li>
+            
+            <p>Multiple presentions to the Swinburne Cyber Security Club, imparting hacking knowledge of <a href="https://docs.google.com/presentation/d/18IJfC_JXm5SDBlKClTRSyM_eBUIk-IQJYrYsXsjrDHw/edit?usp=sharing">SQL Injection</a> and some interesting <a href="https://www.youtube.com/watch?v=f8Ct_rm2cg4">OverTheWire challenges</a></p>
+          </li>
           <li>
             As part of SCSC, our team came:
             <ul>
@@ -462,7 +483,7 @@
             <strong>Communication</strong>
             <ul>
               <li>As a tutor for Computer Systems, I have had a key role in my lab students' learning of logic circuits and ARM assembly programming. When providing help, I have had to carefully balance the depth of my explanations to assist students' understanding, while also giving them room to learn by exploring the problems themselves.</li>
-              <li>I run my own tech help business, and in providing such assistance, have been praised by many clients for my ability to readily explain complex concepts and procedures in a practical and easy to understand manner</li>
+              <li>While providing assistance through my tech help business, I have been praised by many clients for my ability to readily explain complex concepts and procedures in a practical and easy to understand manner</li>
             </ul>
           </li>
           <li class='nobreak'>
@@ -496,35 +517,21 @@
       </div>
     </div>
     <div class='nobreak'>
-      <h2>Extra-curricular</h2>
-      <div class='section'>
-        <ul>
-          <li>
-            
-            <p><strong>LAN parties</strong></p>
-            
-            <p>July 2008 – Present</p>
-            
-            <p><a href="http://www.lanslide.com.au/">LAN-slide</a> event coordinator, and attendee of community-focused PC gaming LAN events such as: Switch LAN, BluewireLAN, and Awaken LAN.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class='nobreak'>
       <h2>Other interests</h2>
-      <div class='section two-column'>
-        <ul>
+      <div class='section two-column interests'>
+        <ul class='column'>
           <li>Android rooting</li>
           <li>Quadcopters</li>
           <li>Skiing</li>
           <li>Making games</li>
           <li>Archery</li>
         </ul>
-        <ul>
+        <ul class='column'>
           <li>Reading: Fantasy / Sci-fi</li>
           <li>Music: Punk rock / Pop rock, Soundwave festival, concerts</li>
           <li>Home media library streaming</li>
           <li>TV shows: Stargate, Mr Robot, Dexter, GoT</li>
+          <li>PC gaming LAN parties: LAN-slide, Switch LAN, BluewireLAN, Awaken LAN</li>
           <!-- %li Programming -->
           <!-- %li Web design -->
           <!-- %li Assisting others with technology -->

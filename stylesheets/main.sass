@@ -71,21 +71,30 @@ p
   margin: 0.4em 0
 
 .two-column
-  & ul, table
+  display: flex
+  margin-right: 3%
+  & .column
     display: inline-block
     margin: 0
-    min-width: 120px
+    margin-right: 3%
     vertical-align: top
-  & ul
-    margin-right: 40px
-  & table
-    &:nth-child(odd)
-      width: 45%
-  &.professional-development ul
-    margin-right: 3px
-    &:nth-child(odd)
-      min-width: 286px
-      max-width: 46%
+    &:last-child
+      margin-right: 0
+
+@media (max-width: 500px)
+  .two-column
+    flex-wrap: wrap
+    margin-right: auto
+
+.two-column.header
+  flex-wrap: wrap
+  margin-right: 0
+  table.column
+    margin-right: auto
+    &:first-child
+      width: 240px
+    & th
+      width: 58px
 
 .break
   page-break-before: always
