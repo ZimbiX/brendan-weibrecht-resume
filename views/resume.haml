@@ -1,3 +1,4 @@
+- allow_break = ['experience', 'skills_abilities']
 - [ 'header',
     'intro',
     'experience',
@@ -10,5 +11,5 @@
     'referees',
     'footer',
   ].each do |partial|
-  .nobreak
+  %div{:class => ('nobreak' unless allow_break.include? partial)}
     = haml ('_' + partial).to_sym
