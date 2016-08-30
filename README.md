@@ -6,7 +6,7 @@ Having previously created my résumé in HTML and CSS so as to have maximum cont
 
 ## Setup
 
-With Ruby 2.2.0 installed, just run Bundler to install all the required gems:
+With Ruby 2.3.1 installed, just run Bundler to install all the required gems:
 
 	bundle install
 
