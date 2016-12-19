@@ -11,6 +11,7 @@ group :development do
   gem 'sinatra'
   gem 'tilt', '~> 1.3'
   gem 'shotgun'
+  gem 'thin'
   gem 'jazz_fingers' # Better Pry
   gem 'pry-rescue'
   gem 'guard-livereload', require: false
