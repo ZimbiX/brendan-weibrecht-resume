@@ -40,7 +40,7 @@ The build will be located in the `build` folder.
 
 ### PDF
 
-To best preserve formatting, use Google Chrome. Open the HTML in Chrome, and print with headers & footers disabled.
+To best preserve formatting, use Google Chrome. Open the HTML in Chrome, and print with headers & footers disabled, and all margins set to 5mm.
 
 ### Microsoft Word
 
