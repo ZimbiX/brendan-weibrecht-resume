@@ -1,5 +1,5 @@
 require 'fileutils'
-require 'sinatra/base'
+
 require './app'
 
 build_dir = Pathname.new 'build'

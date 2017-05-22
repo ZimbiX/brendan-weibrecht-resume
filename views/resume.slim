@@ -11,5 +11,5 @@
     'referees',
     'footer',
   ].each do |partial|
-  %div{:class => ('nobreak' unless allow_break.include? partial)}
-    = haml ('_' + partial).to_sym
+  div class="#{'nobreak' unless allow_break.include? partial}"
+    == slim ('_' + partial).to_sym

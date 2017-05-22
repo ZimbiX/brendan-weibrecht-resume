@@ -1,14 +1,16 @@
 source 'https://rubygems.org'
 
 group :development do
+  gem 'require_all'
   gem 'rake'
   gem 'guard'
   gem 'guard-rake'
-  gem 'haml'
-  gem 'html2haml'
+  gem 'slim'
   gem 'sass'
   # gem 'middleman'
   gem 'sinatra'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'tilt', '~> 1.3'
   gem 'shotgun'
   gem 'thin'
@@ -17,6 +19,6 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'redcarpet' # Markdown
   gem 'haml-contrib' # For Maruku
-  gem 'maruku' # Maruku markdown
   gem 'pdfkit'
+  gem 'htmlbeautifier'
 end
