@@ -9,7 +9,7 @@ group :development do
   gem 'sass'
   # gem 'middleman'
   gem 'sinatra'
-  gem 'tilt', '~> 1.3'
+  gem 'tilt'
   gem 'shotgun'
   gem 'thin'
   gem 'jazz_fingers' # Better Pry
