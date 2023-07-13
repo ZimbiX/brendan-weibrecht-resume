@@ -15,17 +15,26 @@ body, table
 b, strong, th
   font-weight: 600
 
+h1, h2, h3, h4, h5, .my-title
+  font-variant: small-caps
+  font-weight: bold
+  border-bottom: 1px solid black
+  margin-bottom: 15px
+  line-height: normal
+
 h1
   font-size: 28pt
 
   @media print
     margin-top: 0
 
-h1, h2, h3, h4, h5
-  font-variant: small-caps
-  border-bottom: 1px solid black
-  margin-bottom: 15px
-  line-height: normal
+  margin-bottom: 5px
+  border-bottom: none
+
+.my-title
+  font-size: 18pt
+  margin-top: 0
+  padding-bottom: 15px
 
 abbr
   border-bottom: 1px dotted #333
