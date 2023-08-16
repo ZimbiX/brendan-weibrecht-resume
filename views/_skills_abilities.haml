@@ -77,7 +77,7 @@
 
     ## Event sourcing
 
-    Event sourcing is a fundamental aspect of the design of deX. Having worked with the paradigm for several years, I am intimately familiar with it, and the different set of problems that arise as opposed to relational data. There are multiple interpretations of what 'event sourcing' means - to me it's that the eventually-consistent projected data can be (and occasonally is) completely and accurately rebuilt from the append-only eventlog of immutable events. We investigated existing event sourcing frameworks, but wanted to make different design tradeoffs, so opted to build our own; and learnt a lot about PostgreSQL in the process - e.g. pagination by cursor, performance degradation from relative stagnation of an event stream.
+    Event sourcing is a fundamental aspect of the design of deX. Having worked with the paradigm for several years, I am intimately familiar with it, and the different set of problems that arise as opposed to relational data. There are multiple interpretations of what 'event sourcing' means - to me it's that the eventually-consistent projected data can be (and occasonally is) completely and accurately rebuilt from the append-only eventlog of immutable events. We investigated existing event sourcing frameworks, but wanted to make different design tradeoffs, so opted to build our own; and learnt a lot about PostgreSQL in the process - e.g. pagination by cursor, performance degradation from relative stagnation of an event stream, and the pitfalls of reindexing a huge table.
 
     ## Automation
 
