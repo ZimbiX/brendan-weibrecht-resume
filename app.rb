@@ -7,6 +7,9 @@ require 'sinatra/base'
 require 'sass'
 require 'redcarpet'
 
+require 'haml'
+require 'haml/filters/maruku'
+
 class MyApp < Sinatra::Base
   # Match shotgun's port when the Ruby file is executed directly
   set :port, 9393

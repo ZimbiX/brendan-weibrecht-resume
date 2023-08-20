@@ -17,6 +17,7 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'redcarpet' # Markdown
   gem 'haml-contrib' # For Maruku
+  gem 'rexml' # For Maruku
   gem 'maruku' # Maruku markdown
   gem 'pdfkit'
 end
