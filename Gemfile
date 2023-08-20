@@ -10,7 +10,7 @@ group :development do
   # gem 'middleman'
   gem 'sinatra'
   gem 'tilt'
-  gem 'shotgun'
+  gem 'shotgun', git: 'https://github.com/PoroshkinaVV/shotgun', branch: 'ruby2.7-warnings' # Fork from PR for Ruby 3 compatibility
   gem 'thin'
   gem 'jazz_fingers' # Better Pry
   gem 'pry-rescue'
