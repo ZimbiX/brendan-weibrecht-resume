@@ -4,7 +4,7 @@ group :development do
   gem 'rake'
   gem 'guard'
   gem 'guard-rake'
-  gem 'haml'
+  gem 'haml', '~> 5.2'
   gem 'html2haml'
   gem 'sass'
   # gem 'middleman'
