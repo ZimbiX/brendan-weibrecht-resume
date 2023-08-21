@@ -629,9 +629,9 @@ Tickets and flights were ~95% self-funded
 
 <p>I’ve been using Ruby as my primary programming language since 2011. Over that time, I’ve built a deep technical knowledge of the language, and its standard library, gems, tools, and techniques. At GreenSync, I was regarded as the go-to person for advice regarding Ruby techniques &amp; issues.</p>
 
-<p>Although I can work with Rails, I’m not a fan of it. I find it overly obscures the flow of execution and data. And I think the merging of data and persistence that ActiveRecord encourages is unhelpful, resulting in slower unit tests from needlessly involving the database. Of GreenSync’s many current codebases, only one uses Rails; the others are all based around dry-rb, Sequel, Que, and Sinatra. I was instrumental in steering the organisation in the direction of adopting dry-rb over Rails.</p>
+<p>Rails is not my favourite framework. I find it overly obscures the flow of execution and data. And I think the merging of data and persistence that ActiveRecord encourages is unhelpful, resulting in slower unit tests from needlessly involving the database. I was instrumental in steering GreenSync in the direction of adopting dry-rb instead of Rails. Only one of their current codebases uses Rails; all others are based in dry-rb, Sequel, Que, and Sinatra.</p>
 
-<p>I prefer an application architecture organised by domain concept at the top level rather than by MVC layer. This makes the code easier to find, given it’s far more frequent to need to work on multiple files of a concept, rather than multiple files of a layer. I convinced my colleagues at GreenSync, and we arranged all of our codebases this way. I even created a crude tool, <code>renamespace</code>, to assist in renamespacing a class/file. » <a href="https://github.com/ZimbiX/renamespace">GitHub</a></p>
+<p>I prefer an application architecture organised by domain concept at the top level rather than by MVC layer. This makes the code easier to find, given it’s far more frequent to need to work on multiple files of a concept, rather than multiple files of a layer. I brought this up with my colleagues at GreenSync, and we then arranged all of our codebases this way. I even created a crude tool, <code>renamespace</code>, to assist in renamespacing a class/file. » <a href="https://github.com/ZimbiX/renamespace">GitHub</a></p>
 
 <p>The majority of my experience is in the realm of microservices and relatively small apps. I’d be very interested to explore what it’s like to work in a (majestic) monolith, where it sounds like tools like Packwerk would come in handy to maintain order.</p>
 
@@ -645,7 +645,7 @@ Tickets and flights were ~95% self-funded
 
 <h2 id="docker">Docker</h2>
 
-<p>At GreenSync, each app had its own Dockerised development environment; and Docker-based deployment (with Kubernetes). Using Docker for dev environments was excellent for making it really easy to get set up to work on GreenSync’s many apps.</p>
+<p>At GreenSync, each app had its own Dockerised development environment; and Docker-based deployment (with Kubernetes). Docker is excellent to use for dev environments, streamlining the set-up process for working on GreenSync’s many apps.</p>
 
 <p>I have a wealth of experience in optimising image build times of deployment Docker images to cache as much as possible, through careful layering, ordering, and context selection; and in Docker Compose setups.</p>
 
@@ -655,7 +655,7 @@ Tickets and flights were ~95% self-funded
 
 <h2 id="postgresql">PostgreSQL</h2>
 
-<p>GreenSync used PostgreSQL exclusively, and we made great use of its JSONB datatype. I am intimately familiar with querying PG and JSONB, and using the psql shell. I was responsible for several complex querying optimisations that allowed GreenSync to save a significant amount of money on DB hosting costs.</p>
+<p>GreenSync used PostgreSQL exclusively, and we made great use of its JSONB datatype. I am intimately familiar with querying PG and JSONB, and using the psql shell. I implemented several complex querying optimisations that resulted in significant financial cost reduction for DB hosing.</p>
 
 <p>When it came time to upgrade deX from PostgreSQL 9.6 due to its impending end-of-life, I designed, implemented, and executed, a custom upgrade process for deX that allowed mere minutes of downtime (and no data loss). This was far from a trivial outcome, given the restrictions of Google Cloud’s hosted PostgreSQL product, which necessitated a full SQL dump and load of deX’s hundreds of gigabytes.</p>
 
@@ -681,7 +681,7 @@ Tickets and flights were ~95% self-funded
 
 <p>With my experience contributing to open source projects, I am very comfortable with working async, which was a required skill in switching to remote work due to Covid. Writing things down is great for having a historic record of conversations and decisions anyway - I love GitHub issues for this.</p>
 
-<p>Pairing was such an important part of our culture at GreenSync that, when we switched to remote work, we needed a great remote pairing tool. With a third of our team using Linux, we needed full cross-platform capability, which ruled out many options. I was the one to take on researching and testing appropriate tools, and uncovered Drovio (formerly USE Together), and Pop (formerly Screen); which both served us well.</p>
+<p>When GreenSync switched to remote work, we needed a great remote pairing tool to maintain the vital pairing culture. With a third of the team using Linux, we required full cross-platform support. I volunteered to research and test appropriate tools, discovering Drovio (formerly USE Together), and Pop (formerly Screen); which both served us well.</p>
 
 <h2 id="event_sourcing">Event sourcing</h2>
 
@@ -815,11 +815,17 @@ Tickets and flights were ~95% self-funded
 <li>Linux</li>
 <li>Making games</li>
 <li>Archery</li>
+<li>Rock climbing</li>
+<li>Planes/flying</li>
+<li>Playing video games</li>
+<li>Pets</li>
 </ul>
 <ul class='column'>
 <li>Reading: Fantasy / Sci-fi</li>
 <li>Music: Punk rock / Pop rock, Soundwave and Unify festivals, concerts</li>
 <li>Home media library streaming</li>
+<li>Engaging in intellectual conversation</li>
+<li>Learning about others' special interests</li>
 <li>PC gaming LAN parties: LAN-slide, Switch LAN, Indie LAN, BluewireLAN, Awaken LAN</li>
 <li>TV shows: The Wire, Sherlock, Stargate, Bron/Broen (The Bridge), Black Mirror, Halt and Catch Fire, Mr Robot, Game of Thrones, Pure Pwnage, Dexter</li>
 <li>Movies: The Fifth Element, Limitless, Memento, Back to the Future, Children of Men, The Shawshank Redemption, The Green Mile, Léon: The Professional, Pulp Fiction, Edge of Tomorrow, American Beauty</li>
