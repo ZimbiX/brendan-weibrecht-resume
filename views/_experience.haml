@@ -1,8 +1,10 @@
 :ruby
   require 'base64'
 
-  def self.base64_png(png_path)
-    'data:image/png;base64,' + Base64.strict_encode64(File.read(png_path))
+  def self.base64_img(file_path)
+    extension = file_path.split('.').last
+    type = extension == 'svg' ? 'svg+xml' : extension
+    "data:image/#{type};base64," + Base64.strict_encode64(File.read(file_path))
   end
 
 %h2 Professional experience
@@ -11,7 +13,7 @@
     %h3 Software Developer
     .section
       .company-logo-wrapper
-        %img{src: base64_png('images/greensync-icon.png')}
+        %img{src: base64_img('images/greensync-icon.png')}
       .description
         :maruku
           **GreenSync**, Melbourne CBD (then fully remote since Covid)
@@ -28,7 +30,7 @@
     %h3 Ruby Developer
     .section
       .company-logo-wrapper
-        %img{src: base64_png('images/forticode-icon.png')}
+        %img{src: base64_img('images/forticode-icon.png')}
       .description
         :maruku
           **Forticode**, Melbourne CBD
@@ -43,7 +45,7 @@
     %h3 Junior Ruby Developer
     .section
       .company-logo-wrapper
-        %img{src: base64_png('images/allori-logo.png')}
+        %img{src: base64_img('images/allori-logo.png')}
       .description
         :maruku
           **Allori**, Canterbury
@@ -56,7 +58,7 @@
     %h3 Swinburne Cyber Security Club President
     .section
       .company-logo-wrapper
-        %img{src: base64_png('images/scsc-icon.png')}
+        %img{src: base64_img('images/scsc-icon.png')}
       .description
         :maruku
           **Swinburne University of Technology**, Hawthorn
@@ -69,7 +71,7 @@
     %h3 Freelance Rails Developer
     .section
       .company-logo-wrapper
-        %img{src: base64_png('images/kproapps-logo.png')}
+        %img{src: base64_img('images/kproapps-logo.png')}
       .description
         :maruku
           **KproApps**, working remotely
@@ -82,7 +84,7 @@
     %h3 Post-Production
     .section
       .company-logo-wrapper
-        %img{src: base64_png('images/metropolis-icon.png')}
+        %img{src: base64_img('images/metropolis-icon.png')}
       .description
         :maruku
           **Metropolis Metering Services**, Brunswick
@@ -95,7 +97,7 @@
     %h3 Post-Production, Web Tester/Editor
     .section
       .company-logo-wrapper
-        %img{src: base64_png('images/allori-logo.png')}
+        %img{src: base64_img('images/allori-logo.png')}
       .description
         :maruku
           **Allori**, Hawthorn
@@ -108,7 +110,7 @@
     %h3 Tutor for Computer Systems
     .section
       .company-logo-wrapper
-        %img{src: base64_png('images/swinburne-logo.png'), style: 'max-height: 55px'}
+        %img{src: base64_img('images/swinburne-logo.png'), style: 'max-height: 55px'}
       .description
         :maruku
           **Swinburne University of Technology**, Hawthorn
