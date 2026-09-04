@@ -3,7 +3,7 @@ require 'sinatra/base'
 require './app'
 
 build_dir = Pathname.new 'build'
-build_name = Pathname.new 'brendan-weibrecht-resume'
+build_name = Pathname.new 'index' # Matches the filename it's published under
 
 task :build do
   begin

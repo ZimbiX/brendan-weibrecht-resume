@@ -1,6 +1,6 @@
 # Brendan Weibrecht's résumé
 
-**[View the current version of my résumé online][html build]** (available under `build`).
+**[View the current version of my résumé online][html build]**
 
 Having previously created my résumé in HTML and CSS so as to have maximum control over its layout and formatting, I decided to over-engineer it in order to distinguish myself when applying for positions. Content is now written in Markdown, layouts use HAML, style is in Sass, and previews and builds happen automatically thanks to some handy Ruby gems.
 
@@ -34,7 +34,7 @@ Or to just build once:
 
 	bundle exec rake build
 
-The build will be located in the `build` folder.
+The build will be located at `build/index.html`, and is not committed — `build` holds only a redirect for the old HTMLPreview link.
 
 ### PDF
 
@@ -44,13 +44,9 @@ To best preserve formatting, use Google Chrome. Open the HTML in Chrome, and pri
 
 To best preserve formatting, use Microsoft Word. Open the HTML in Word, and save as a `.doc` file.
 
-## Committing changes
-
-Build before committing to keep the published build up to date.
-
 ## Publishing
 
-Pushing to `master` triggers the [Publish workflow](.github/workflows/publish.yml), which runs `bundle exec rake build` and commits the result to [`ZimbiX/brendan-weibrecht-website`](https://github.com/ZimbiX/brendan-weibrecht-website) as `resume/index.html`, making it live at the URL above.
+Pushing to `master` triggers the [Publish workflow](.github/workflows/publish.yml), which runs `bundle exec rake build` and commits `build/index.html` to [`ZimbiX/brendan-weibrecht-website`](https://github.com/ZimbiX/brendan-weibrecht-website) as `resume/index.html`, making it live at the URL above.
 
 This needs a `PAGES_REPO_TOKEN` repository secret: a fine-grained personal access token scoped to the `brendan-weibrecht-website` repository with read & write access to Contents.
 

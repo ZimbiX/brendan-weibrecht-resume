@@ -44,7 +44,7 @@ jobs:
           path: website
 
       - name: Copy build into the site
-        run: cp resume/build/brendan-weibrecht-resume.html "website/$PAGES_PATH"
+        run: cp resume/build/index.html "website/$PAGES_PATH"
 
       - name: Commit and push
         working-directory: website
