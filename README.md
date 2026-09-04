@@ -6,11 +6,9 @@ Having previously created my résumé in HTML and CSS so as to have maximum cont
 
 ## Setup
 
-With Ruby 2.3.1 installed, just run Bundler to install all the required gems:
+With Ruby installed, just run Bundler to install all the required gems:
 
 	bundle install
-
-This should be sufficient to get it working on Ubuntu 14.04.
 
 ## Server
 
