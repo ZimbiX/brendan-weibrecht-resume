@@ -12,15 +12,11 @@ With Ruby installed, just run Bundler to install all the required gems:
 
 ## Server
 
-To start Sinatra, run either:
-
-	bundle exec shotgun
-
-or:
+To start Sinatra, run:
 
 	bundle exec ./app.rb
 
-Then open your browser at the given specified port
+Then open your browser at the given specified port. Views and styles are re-rendered on each request, so there's no need to restart after editing them.
 
 ## Build
 
