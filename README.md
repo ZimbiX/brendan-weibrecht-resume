@@ -48,4 +48,10 @@ To best preserve formatting, use Microsoft Word. Open the HTML in Word, and save
 
 Build before committing to keep the published build up to date.
 
+## Publishing
+
+Pushing to `master` triggers the [Publish workflow](.github/workflows/publish.yml), which runs `bundle exec rake build` and commits the result to [`ZimbiX/brendan-weibrecht-website`](https://github.com/ZimbiX/brendan-weibrecht-website) as `resume/index.html`, making it live at the URL above.
+
+This needs a `PAGES_REPO_TOKEN` repository secret: a fine-grained personal access token scoped to the `brendan-weibrecht-website` repository with read & write access to Contents.
+
 [html build]: https://brendan.weibrecht.net.au/resume

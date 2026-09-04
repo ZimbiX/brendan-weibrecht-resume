@@ -1,0 +1,63 @@
+name: Publish
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+env:
+  PAGES_REPO: ZimbiX/brendan-weibrecht-website
+  # Path within the Pages repo that serves https://brendan.weibrecht.net.au/resume
+  PAGES_PATH: resume/index.html
+
+jobs:
+  publish:
+    name: Build and publish to GitHub Pages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out résumé
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.0.0
+        with:
+          path: resume
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b # v1.321.0
+        with:
+          working-directory: resume
+          bundler-cache: true
+
+      - name: Build HTML
+        working-directory: resume
+        run: bundle exec rake build
+
+      - name: Check out GitHub Pages site
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.0.0
+        with:
+          repository: ${{ env.PAGES_REPO }}
+          token: ${{ secrets.PAGES_REPO_TOKEN }}
+          path: website
+
+      - name: Copy build into the site
+        run: cp resume/build/brendan-weibrecht-resume.html "website/$PAGES_PATH"
+
+      - name: Commit and push
+        working-directory: website
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          if [ -z "$(git status --porcelain -- "$PAGES_PATH")" ]; then
+            echo 'Résumé is already up to date; nothing to publish.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- "$PAGES_PATH"
+          git commit -m 'Update résumé' \
+            -m "Built from $GITHUB_REPOSITORY@$SOURCE_SHA by $GITHUB_WORKFLOW #$GITHUB_RUN_NUMBER"
+          git push
