@@ -48,4 +48,4 @@ To best preserve formatting, use Microsoft Word. Open the HTML in Word, and save
 
 Build before committing to keep the published build up to date.
 
-[html build]: http://htmlpreview.github.com/?https://github.com/ZimbiX/brendan-weibrecht-resume/blob/master/build/brendan-weibrecht-resume.html
+[html build]: https://brendan.weibrecht.net.au/resume
