@@ -4,10 +4,10 @@
   /   %li.nobreak
   /     %strong Title
   /     %div
-  /       :maruku
+  /       :markdown
   /         Explanation
 
-  :maruku
+  :markdown
 
     ## Functional Programming
 
@@ -23,13 +23,13 @@
 
     Rails is not my favourite framework. I find it overly obscures the flow of execution and data. And I think the merging of data and persistence that ActiveRecord encourages is unhelpful, resulting in slower unit tests from needlessly involving the database. I was instrumental in steering GreenSync in the direction of adopting dry-rb instead of Rails. Only one of their current codebases uses Rails; all others are based in dry-rb, Sequel, Que, and Sinatra.
 
-    I prefer an application architecture organised by domain concept at the top level rather than by MVC layer. This makes the code easier to find, given it's far more frequent to need to work on multiple files of a concept, rather than multiple files of a layer. I brought this up with my colleagues at GreenSync, and we then arranged all of our codebases this way. I even created a crude tool, `renamespace`, to assist in renamespacing a class/file. >> [GitHub](https://github.com/ZimbiX/renamespace)
+    I prefer an application architecture organised by domain concept at the top level rather than by MVC layer. This makes the code easier to find, given it's far more frequent to need to work on multiple files of a concept, rather than multiple files of a layer. I brought this up with my colleagues at GreenSync, and we then arranged all of our codebases this way. I even created a crude tool, `renamespace`, to assist in renamespacing a class/file. » [GitHub](https://github.com/ZimbiX/renamespace)
 
     The majority of my experience is in the realm of microservices and relatively small apps. I'd be very interested to explore what it's like to work in a (majestic) monolith, where it sounds like tools like Packwerk would come in handy to maintain order.
 
     ## Elm
 
-    In Melbourne's first Covid lockdown, I taught myself the pure functional frontend programming language Elm, by recreating a game I've built a few times now. PathFinder is a multiplayer maze game based on a 1974 [board game](http://boardgamegeek.com/boardgame/2884/pathfinder) of the same name, most easily described as a maze version of Battleship. My game works well on desktop and supports multi-device or same-device multiplayer. I fell in love with Elm, and would like to write more Elm in future. >> [GitHub](https://github.com/ZimbiX/pathfinder-elm)
+    In Melbourne's first Covid lockdown, I taught myself the pure functional frontend programming language Elm, by recreating a game I've built a few times now. PathFinder is a multiplayer maze game based on a 1974 [board game](http://boardgamegeek.com/boardgame/2884/pathfinder) of the same name, most easily described as a maze version of Battleship. My game works well on desktop and supports multi-device or same-device multiplayer. I fell in love with Elm, and would like to write more Elm in future. » [GitHub](https://github.com/ZimbiX/pathfinder-elm)
 
     ## React
 
@@ -93,22 +93,22 @@
 /   Ruby
 /   %ul
 /     %li.nobreak
-/       :maruku
+/       :markdown
 /         I was responsible for all Forticode web and Ruby development. I built a web demonstration of Forticode's Cipherise authentication technology, and turned this into an SDK for reuse in customer applications. For deployment, I set up Passenger on AWS Red Hat, and wrote a Heroku-esque Git hook for 'git push' deployment.
 /    %li.nobreak
-/      :maruku
+/      :markdown
 /        In my work at Allori, I produced many software components, while maintaining Ruby idioms, conventions, and patterns. I worked on some Rails projects, but was mainly tasked with ones based around Sinatra and Middleman; I would very much like to expand my Rails experience.
 /    %li.nobreak
-/      :maruku
-/        Over the 2014–2015 new year I worked on an implementation of the classic box movement puzzle, [Sokoban](http://en.wikipedia.org/wiki/Sokoban). The code is reasonably well covered by minitest specs. It currently uses an ASCII command-line interface, but I also plan to create a graphical alternative. >> [GitHub](https://github.com/ZimbiX/Sokoban)
+/      :markdown
+/        Over the 2014–2015 new year I worked on an implementation of the classic box movement puzzle, [Sokoban](http://en.wikipedia.org/wiki/Sokoban). The code is reasonably well covered by minitest specs. It currently uses an ASCII command-line interface, but I also plan to create a graphical alternative. » [GitHub](https://github.com/ZimbiX/Sokoban)
 /    %li
-/      :maruku
+/      :markdown
 /        I recently performed a conversion from a static website into a Sinatra application, leveraging HAML and Sass -- the result can be seen at [mosttrustedadvisers.com](http://mosttrustedadvisers.com/)
 /    %li.nobreak
-/      :maruku
+/      :markdown
 /        At Allori, I was tasked with adding new functionality to a Rails [video course system](http://insights.connectingwithclients.com.au/); I implemented YouTube support, the ability to sync videos from more than one Vimeo account, and an improved course editing UI.
 /     %li.nobreak
-/       :maruku
+/       :markdown
 /         Libraries & tools:
 
 /         - Frontend/design: *React*, *jQuery*, *CoffeeScript*, *HAML/Slim*, *Sass*, *Cells*, *lodash*
@@ -124,22 +124,22 @@
 /   C#
 /   %ul
 /     %li.nobreak
-/       :maruku
-/         At uni, I took the incredibly interesting concurrent programming unit, *Advanced .NET Programming* (since retitled *Concurrent Programming*). I implemented many concurrency utilities, which later allowed me to create solutions to the classical concurrency problems: Dining Philosophers, and Cigarette Smokers; and others like Hilzer's Barbershop, and River Crossing. >> [GitHub](https://github.com/ZimbiX/Concurrency)
+/       :markdown
+/         At uni, I took the incredibly interesting concurrent programming unit, *Advanced .NET Programming* (since retitled *Concurrent Programming*). I implemented many concurrency utilities, which later allowed me to create solutions to the classical concurrency problems: Dining Philosophers, and Cigarette Smokers; and others like Hilzer's Barbershop, and River Crossing. » [GitHub](https://github.com/ZimbiX/Concurrency)
 /     %li.nobreak
-/       :maruku
-/         As my *Object-Oriented Programming* distinction project at uni, I created a version of my favourite board game, Khet ([khet.com](http://www.khet.com/)), most easily described as &lsquo;laser chess&rsquo;. The project demonstrates effective use of OO principles, and an application of the MVC design pattern. >> [GitHub](https://github.com/ZimbiX/Khet)
+/       :markdown
+/         As my *Object-Oriented Programming* distinction project at uni, I created a version of my favourite board game, Khet ([khet.com](http://www.khet.com/)), most easily described as &lsquo;laser chess&rsquo;. The project demonstrates effective use of OO principles, and an application of the MVC design pattern. » [GitHub](https://github.com/ZimbiX/Khet)
 / %li.nobreak
 /   C++
 /   %ul
 /     %li
-/       :maruku
+/       :markdown
 /         In the course of taking the *Data Structures and Patterns* unit at uni, I created low-level classes for typical data structures like doubly-linked list, stack, queue, binary tree, n-ary tree; and implemented design patterns, including the iterator.
 / %li
 /   GameMaker Language (GML)
 /   %ul
 /     %li
-/       :maruku
+/       :markdown
 /         I've been creating software since a young age -- I started making games with GameMaker in grade 5 (2004). My first version of PathFinder was developed in 2007.
 / %li
 /   %strong Building computers
